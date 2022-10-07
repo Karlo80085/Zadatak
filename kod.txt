@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+int a;
+int b;
+int c;
+string knjige [9] = {"Matematika", "Hrvatski", "Povijest", "Engleski", "Fizika", "Kemija", "Osnove elektrotehnike", "Informatika", "TZK"};
+int main()
+{
+    cout<<"unesite broj dana (1-7 jedan predstavlja ponedjeljak, a sedam nedjelju): "<<endl;
+    cin>>a;
+    if(a<6)
+    {cout<<"Knjiznica radi"<<endl;
+        cout<<"Pero treba broj knjiga koji ce stati na njegovu policu. Unesite broj knjiga: "<<endl;
+        while (1){
+        cin>>b;
+        if(b>9)
+        {cout<<"Previše knjiga. Nece stati na policu."<<endl;}
+        else if(b<9)
+        {cout<<"Trenutan broj knjiga stane na policu, ali bi moglo jos."<<endl;}
+        else{cout<<"To je maksimalan broj knjiga koje stanu na policu"<<endl;}
+        if(b==9){break;}}
+      cout<<"Pero je napunio košaru sa knjigama i stavlja ih na blagajnu."<<endl<<"Knjige idu ovim redoslijedom:"<<endl;
+      for(c=0;c<9;c++){cout<<knjige[c]<<endl;}
+     cout<<"Pero je skuzio da je uzeo umjesto programiranja povijest. Pero ce sada zamijenit knjige."<<endl;
+     knjige [2] = "Programiranje";
+     for(c=0;c<9;c++){cout<<knjige[c]<<endl;}
+    }
+    else if(a>7){cout<<"Netocan unos broja dana.";}
+    else{cout<<"Knjiznica ne radi";}
+
+    return 0;
+}
